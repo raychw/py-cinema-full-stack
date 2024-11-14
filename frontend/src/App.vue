@@ -105,9 +105,9 @@ export default {
     this.logIn();
 
     setInterval(() => {
-      // if (this.expiresAt && this.expiresAt * 1e3 > Date.now()) return;
+      if (this.expiresAt && this.expiresAt * 1e3 > Date.now()) return;
       this.refreshToken();
-    }, 5 * 1e3);
+    }, 60 * 1e3);
   },
   components: {
     SignIn,
